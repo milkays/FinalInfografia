@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+<style>
+    input[type=button],
+    input[type=submit],
+    input[type=reset],
+    input[type=file] {
+        background-color: #2e2e2c;
+        border-style: outset;
+        color: white;
+        padding: 20px 32px;
+        text-decoration: none;
+        margin: 20px 250px;
+        cursor: pointer;
+        align-content: center;
+        display: flex;
+    }
+    
+    .grid {
+        display: grid;
+        place-items: center;
+        font-size: 25px;
+        height: 300px;
+        position: relative;
+        left: 600px;
+        top: 2px;
+    }
+    /* display: inline-block; */
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Say Hello</title>
+</head>
+
+<body>
+    <center><img src="{{logo}}" width="450" height="250"></center>
+    <br>
+    <center>
+        <!-- <form method="POST" enctype="multipart/form-data">
+            {{form.hidden_tag()}} {{form.file()}} {{form.submit()}}
+        </form> -->
+        <form action="/columnas" method="post" enctype="multipart/form-data" class="form-inline">
+            <div class="grid">
+                <input type="file" name="file" style="margin: auto">
+                <br>
+                <input type="submit" value="Cargar" style="margin: auto">
+            </div>
+        </form>
+    </center>
+
+</body>
+
+</html>
